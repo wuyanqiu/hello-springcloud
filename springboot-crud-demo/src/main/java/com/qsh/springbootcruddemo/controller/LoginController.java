@@ -28,9 +28,9 @@ public class LoginController {
         session.setAttribute("loginUserName",username);
         if(oneEmp!=null && oneEmp.getPassword().equals(password)){
             //return "redirect:/main.html";
-            return "ok";
+            return "success";
         }else {
-            return "Nok";
+            return "failed";
         }
 
     }
