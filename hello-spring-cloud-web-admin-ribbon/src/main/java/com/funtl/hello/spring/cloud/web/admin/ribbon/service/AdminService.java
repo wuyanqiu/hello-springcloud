@@ -11,7 +11,7 @@ public class AdminService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public String sayHi(String message){
-        return restTemplate.getForObject(url+"/hi?message="+message,String.class);
+    public String sayHi(String message) {
+        return restTemplate.getForObject(url + "/hi?message=" + message, String.class);
     }
 }

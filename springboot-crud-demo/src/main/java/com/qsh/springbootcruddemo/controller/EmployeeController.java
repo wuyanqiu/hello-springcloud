@@ -19,40 +19,56 @@ public class EmployeeController {
     @Autowired
     private DeptService deptService;
 
+
+
+    @PostMapping("/regVerification")
+    @ResponseBody
+    public String getVerification(@RequestParam("lastName") String lastName, @RequestParam("email") String email) {
+        System.out.println("++++++++++++");
+        Employee employee = new Employee();
+        employee.setLastName(lastName);
+        employee.setEmail(email);
+        System.out.println("++++++++++++" + employee);
+        //  employeeService.getVerification(employee);
+        return "success";
+    }
+
     @GetMapping("/emps")
-    public String getAllEmp(Model model){
+    public String getAllEmp(Model model) {
         List<Employee> allEmp = employeeService.getAllEmp();
         List<Department> allDept = deptService.getAllDept();
-        for (Employee employee:allEmp) {
+        for (Employee employee : allEmp) {
             Integer deptId = employee.getDeptId();
-            for (Department depatement:allDept) {
-                if(deptId==depatement.getId()){
-                    employee.setDepartment(new Department(deptId,depatement.getDepartmentName()));
+            for (Department depatement : allDept) {
+                if (deptId == depatement.getId()) {
+                    employee.setDepartment(new Department(deptId, depatement.getDepartmentName()));
                 }
             }
         }
-        model.addAttribute("emps",allEmp);
+        model.addAttribute("emps", allEmp);
         return "emp/list";
     }
 
     /**
      * 去添加员工页面
+     *
      * @param model
      * @return
      */
     @GetMapping("/emp")
-    public String toAddPage(Model model){
+    public String toAddPage(Model model) {
         List<Department> allDept = deptService.getAllDept();
-        model.addAttribute("depts",allDept);
+        model.addAttribute("depts", allDept);
         return "emp/add";
     }
 
     /**
      * 添加员工
+     *
      * @return
      */
     @PostMapping("/emp")
-    public String addEmp(Employee employee){
+    public String addEmp(Employee employee) {
         //   / 代表当前项目下的根路径
         employeeService.addEmp(employee);
         return "redirect:/emps";
@@ -60,32 +76,42 @@ public class EmployeeController {
 
     /**
      * 去编辑页面
+     *
      * @param id
      * @param model
      * @return
      */
     @GetMapping("/emp/{id}")
-    public String toEditPage(@PathVariable("id") Integer id,Model model){
+    public String toEditPage(@PathVariable("id") Integer id, Model model) {
         List<Department> allDept = deptService.getAllDept();
-        model.addAttribute("depts",allDept);
+        model.addAttribute("depts", allDept);
         Employee oneEmp = employeeService.getOneEmpById(id);
-        model.addAttribute("emp",oneEmp);
+        model.addAttribute("emp", oneEmp);
         return "emp/add";
     }
 
     /**
      * 修改员工
+     *
      * @param employee
      * @return
      */
     @PutMapping("/emp")
-    public String updateEmp(Employee employee){
+    public String updateEmp(Employee employee) {
         employeeService.updateEmp(employee);
         return "redirect:/emps";
     }
+
     @DeleteMapping("/emp/{id}")
-    public String deleteEmp(@PathVariable("id") Integer id){
+    public String deleteEmp(@PathVariable("id") Integer id) {
         employeeService.deleteEmp(id);
         return "redirect:/emps";
     }
+
+    @GetMapping("/user/reg")
+    public String toRegPage() {
+        System.out.println(123);
+        return "emp/reg";
+    }
+
 }

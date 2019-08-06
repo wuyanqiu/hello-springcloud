@@ -5,13 +5,10 @@ import com.qsh.springbootcruddemo.service.DeptService;
 import com.qsh.springbootcruddemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.Map;
+
 
 @Controller
 public class LoginController {
@@ -23,15 +20,32 @@ public class LoginController {
     @ResponseBody
     @PostMapping(value = "user/login")
     public String login(@RequestParam("username") String username,
-                        @RequestParam("password") String password, HttpSession session){
+                        @RequestParam("password") String password, HttpSession session) {
+        System.out.println("登录方法进来了。" + username + password);
         Employee oneEmp = employeeService.getOneEmp(username);
-        session.setAttribute("loginUserName",username);
-        if(oneEmp!=null && oneEmp.getPassword().equals(password)){
+        if (oneEmp != null && oneEmp.getPassword().equals(password)) {
+            session.setAttribute("loginUserName", username);
             //return "redirect:/main.html";
             return "success";
-        }else {
+        } else {
             return "failed";
         }
-
     }
+
+    @ResponseBody
+    @PostMapping(value = "user2/login2")
+    public String login2(@RequestParam("username") String username,
+                        @RequestParam("password") String password, HttpSession session) {
+        System.out.println("登录方法进来了。" + username + password);
+        Employee oneEmp = employeeService.getOneEmp(username);
+        if (oneEmp != null && oneEmp.getPassword().equals(password)) {
+            session.setAttribute("loginUserName", username);
+            //return "redirect:/main.html";
+            return "success";
+        } else {
+            return "failed";
+        }
+    }
+
+
 }

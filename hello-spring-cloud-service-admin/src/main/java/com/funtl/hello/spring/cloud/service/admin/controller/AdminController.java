@@ -13,7 +13,7 @@ public class AdminController {
     private String port;
 
     @GetMapping("/hi")
-    public String sayHi(String message){
-        return String.format("hi,your message is : %s ,port is %s",message,port);
+    public String sayHi(String message) {
+        return String.format("hi,your message is : %s ,port is %s", message, port);
     }
 }

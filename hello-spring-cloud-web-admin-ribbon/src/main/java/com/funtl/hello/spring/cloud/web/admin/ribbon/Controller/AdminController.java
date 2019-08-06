@@ -20,7 +20,7 @@ public class AdminController {
     }*/
 
     @GetMapping(value = "hello")
-    public String hello(){
+    public String hello() {
         return "hello";
     }
 }

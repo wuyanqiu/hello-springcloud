@@ -17,4 +17,6 @@ public interface EmployeeService {
     boolean updateEmp(Employee employee);
 
     boolean deleteEmp(Integer id);
+
+    String getVerification(Employee employee);
 }

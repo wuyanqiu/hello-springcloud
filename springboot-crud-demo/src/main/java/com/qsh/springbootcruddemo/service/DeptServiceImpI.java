@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DeptServiceImpI implements  DeptService {
+public class DeptServiceImpI implements DeptService {
 
     @Autowired
     private DeptDaoMapper deptDaoMapper;
+
     @Override
     public Department getDeptById(Integer id) {
         return deptDaoMapper.getDeptById(id);

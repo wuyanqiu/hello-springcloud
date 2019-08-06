@@ -9,8 +9,8 @@ import java.util.Map;
 public class HelloController {
 
     @RequestMapping("/success")
-    public String success(Map<String,Object> map){
-        map.put("hello","world");
+    public String success(Map<String, Object> map) {
+        map.put("hello", "world");
         return "success";
     }
 }

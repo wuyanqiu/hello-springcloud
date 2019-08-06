@@ -1,10 +1,11 @@
 package com.qsh.springbootcruddemo.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Employee {
+public class Employee implements Serializable {
 
-	private Integer id;
+    private Integer id;
     private String lastName;
 
     private String email;
@@ -12,10 +13,18 @@ public class Employee {
     private Integer gender;
     private Department department;
 
-    private  Integer deptId;
+    private Integer deptId;
     private Date birth;
-
     private String password;
+    private String verification;
+
+    public String getVerification() {
+        return verification;
+    }
+
+    public void setVerification(String verification) {
+        this.verification = verification;
+    }
 
     public Integer getDeptId() {
         return deptId;
@@ -80,25 +89,17 @@ public class Employee {
     public void setBirth(Date birth) {
         this.birth = birth;
     }
-    public Employee(Integer id, String lastName, String email, Integer gender,
-                    Department department) {
-        super();
-        this.id = id;
-        this.lastName = lastName;
-        this.email = email;
-        this.gender = gender;
-        this.department = department;
-        this.birth = new Date();
-    }
 
-    public Employee(Integer id, String lastName, String email, Integer gender, Department department, Date birth, String password) {
+    public Employee(Integer id, String lastName, String email, Integer gender, Department department, Integer deptId, Date birth, String password, String verification) {
         this.id = id;
         this.lastName = lastName;
         this.email = email;
         this.gender = gender;
         this.department = department;
+        this.deptId = deptId;
         this.birth = birth;
         this.password = password;
+        this.verification = verification;
     }
 
     public Employee() {
@@ -112,8 +113,10 @@ public class Employee {
                 ", email='" + email + '\'' +
                 ", gender=" + gender +
                 ", department=" + department +
+                ", deptId=" + deptId +
                 ", birth=" + birth +
                 ", password='" + password + '\'' +
+                ", verification='" + verification + '\'' +
                 '}';
     }
 }

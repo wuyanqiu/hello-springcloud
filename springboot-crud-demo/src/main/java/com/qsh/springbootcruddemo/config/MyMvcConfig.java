@@ -16,7 +16,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     }
 
     @Bean //将组件注册在容器
-    public WebMvcConfigurerAdapter webMvcConfigurerAdapter(){
+    public WebMvcConfigurerAdapter webMvcConfigurerAdapter() {
         WebMvcConfigurerAdapter adapter = new WebMvcConfigurerAdapter() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
@@ -29,8 +29,11 @@ public class MyMvcConfig implements WebMvcConfigurer {
         return adapter;
     }
 
- /*   *//**
+    /*   */
+
+    /**
      * 添加静态资源文件，外部可以直接访问地址
+     *
      * @param registry
      *//*
     @Override
@@ -44,12 +47,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/index.html","/","/user/login","/asserts/**","/webjars/**");
+                .excludePathPatterns("/index.html", "/", "/user/login", "/user/reg", "/asserts/**", "/webjars/**");
     }
 
 
     @Bean
-    public LocaleResolver localeResolver(){
+    public LocaleResolver localeResolver() {
         return new MyLocaleResolver();
     }
 }

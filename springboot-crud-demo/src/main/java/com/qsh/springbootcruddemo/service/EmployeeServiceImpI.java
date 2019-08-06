@@ -3,14 +3,17 @@ package com.qsh.springbootcruddemo.service;
 import com.qsh.springbootcruddemo.dao.EmployeeDaoMapper;
 import com.qsh.springbootcruddemo.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class EmployeeServiceImpI implements EmployeeService {
 
     @Autowired
     private EmployeeDaoMapper employeeDaoMapper;
+
     @Override
     public List<Employee> getAllEmp() {
         return employeeDaoMapper.getAllEmp();
@@ -24,9 +27,9 @@ public class EmployeeServiceImpI implements EmployeeService {
     @Override
     public boolean addEmp(Employee employee) {
         Integer integer = employeeDaoMapper.addEmp(employee);
-        if(integer!=0){
+        if (integer != 0) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -39,12 +42,19 @@ public class EmployeeServiceImpI implements EmployeeService {
     @Override
     public boolean updateEmp(Employee employee) {
         Integer integer = employeeDaoMapper.updateEmp(employee);
-        return integer!=0?true:false;
+        return integer != 0 ? true : false;
     }
 
     @Override
     public boolean deleteEmp(Integer id) {
         Integer integer = employeeDaoMapper.deleteEmp(id);
-        return integer!=0?true:false;
+        return integer != 0 ? true : false;
+    }
+
+    @Async
+    @Override
+    public String getVerification(Employee employee) {
+
+        return null;
     }
 }
