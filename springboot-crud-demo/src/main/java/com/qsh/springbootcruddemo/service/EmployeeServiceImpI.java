@@ -60,9 +60,11 @@ public class EmployeeServiceImpI implements EmployeeService {
     @Async
     @Override
     public String getVerification(Employee employee) {
-        String getVerResult = getVerificate(employee);
-
-        return getVerResult;
+        String regVerification =String.valueOf((int)((Math.random()*9+1)*100000));
+        String getVerResult = getVerificate(employee ,regVerification);
+        String addUserToDBResult = addUserToDB(employee,regVerification);
+        System.out.println("addUserToDBResult:"+addUserToDBResult);
+        return addUserToDBResult;
     }
 
     /**
@@ -70,14 +72,24 @@ public class EmployeeServiceImpI implements EmployeeService {
      * @param employee
      * @return
      */
-    private String getVerificate(Employee employee){
+    private String getVerificate(Employee employee, String regVerification){
         String url = "http://localhost:8765/sendEmail";
-        String regVerification =String.valueOf((int)((Math.random()*9+1)*100000));
         MultiValueMap<String, Object> paramMap = new LinkedMultiValueMap<String, Object>();
         paramMap.add("regVerification",regVerification);
         paramMap.add("email",employee.getEmail());
-        String restResult = restTemplate.postForObject(url, paramMap, String.class);
-        System.out.println("result1==================" + restResult);
-        return restResult;
+        String getVerificateResult = restTemplate.postForObject(url, paramMap, String.class);
+        System.out.println("result1==================" + getVerificateResult);
+        return getVerificateResult;
+    }
+
+    private String addUserToDB(Employee employee, String regVerification){
+        MultiValueMap<String, Object> userMap = new LinkedMultiValueMap<>();
+        userMap.add("lastname",employee.getLastName());
+        userMap.add("email",employee.getEmail());
+        userMap.add("verification",regVerification);
+        String url = "http://localhost:8764/addUserToDb";
+        String addUserResult = restTemplate.postForObject(url, userMap, String.class);
+        System.out.println("result1==================" + addUserResult);
+        return addUserResult;
     }
 }

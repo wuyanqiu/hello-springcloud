@@ -10,15 +10,31 @@
         <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-service-admin</artifactId>
+    <artifactId>hello-spring-cloud-web-AddUserToDB-ribbon</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-service-admin</name>
+    <name>hello-spring-cloud-web-AddUserToDB-ribbon</name>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
     <dependencies>
         <!-- Spring Boot Begin -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -31,30 +47,16 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-        <!-- Spring Cloud End -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.jolokia</groupId>
-            <artifactId>jolokia-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.3.2</version>
-        </dependency>
+        <!-- Spring Cloud End -->
 
+        <!-- 解决 thymeleaf 模板引擎一定要执行严格的 html5 格式校验问题 -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.11</version>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
         </dependency>
     </dependencies>
 
@@ -64,7 +66,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.hello.spring.cloud.service.admin.ServiceAdminApplication</mainClass>
+                    <mainClass>com.funtl.hello.spring.cloud.web.adduser.ribbon.AddUserRibbonApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

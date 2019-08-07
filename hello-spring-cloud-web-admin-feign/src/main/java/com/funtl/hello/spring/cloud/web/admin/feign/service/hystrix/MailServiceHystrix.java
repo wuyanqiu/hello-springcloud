@@ -1,10 +1,10 @@
 package com.funtl.hello.spring.cloud.web.admin.feign.service.hystrix;
 
-import com.funtl.hello.spring.cloud.web.admin.feign.service.EmailService;
+import com.funtl.hello.spring.cloud.web.admin.feign.service.MailService;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EmailServiceHystrix implements EmailService {
+public class MailServiceHystrix implements MailService {
 
     @Override
     public String sendEmail(String email, String regVerification) {

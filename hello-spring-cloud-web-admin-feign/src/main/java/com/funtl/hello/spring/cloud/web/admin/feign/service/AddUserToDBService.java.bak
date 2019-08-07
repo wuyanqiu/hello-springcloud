@@ -1,0 +1,14 @@
+package com.funtl.hello.spring.cloud.web.admin.feign.service;
+
+import com.funtl.hello.spring.cloud.web.admin.feign.service.hystrix.AddUserToDBServiceHystrix;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@FeignClient(value = "hello-spring-cloud-service-admin", fallback = AddUserToDBServiceHystrix.class)
+public interface AddUserToDBService {
+
+    @PostMapping("addUserToDb")
+    public String addUserToDB(@RequestParam("user") MultiValueMap<String,Object> userMap);
+}
