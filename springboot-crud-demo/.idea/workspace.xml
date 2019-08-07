@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71458283-09a2-4b5e-9036-ddd89a5e0468" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-service-admin/src/main/java/com/funtl/hello/spring/cloud/service/admin/service/AddUserToDBServiceImpI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-service-admin/src/main/java/com/funtl/hello/spring/cloud/service/admin/service/AddUserToDBServiceImpI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-service-admin/target/classes/com/funtl/hello/spring/cloud/service/admin/service/AddUserToDBServiceImpI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-service-admin/target/classes/com/funtl/hello/spring/cloud/service/admin/service/AddUserToDBServiceImpI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/hello-spring-cloud-web-AddUserToDB-ribbon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/hello-spring-cloud-web-AddUserToDB-ribbon.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/src/main/java/com/funtl/hello/spring/cloud/web/adduser/ribbon/AddUserRibbonApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/src/main/java/com/funtl/hello/spring/cloud/web/adduser/ribbon/AddUserRibbonApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/src/main/java/com/funtl/hello/spring/cloud/web/adduser/ribbon/service/AddUserToDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/src/main/java/com/funtl/hello/spring/cloud/web/adduser/ribbon/service/AddUserToDBService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/src/main/resouces/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/src/main/resouces/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/target/classes/com/funtl/hello/spring/cloud/web/adduser/ribbon/AddUserRibbonApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/target/classes/com/funtl/hello/spring/cloud/web/adduser/ribbon/AddUserRibbonApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/target/classes/com/funtl/hello/spring/cloud/web/adduser/ribbon/service/AddUserToDBService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hello-spring-cloud-web-AddUserToDB-ribbon/target/classes/com/funtl/hello/spring/cloud/web/adduser/ribbon/service/AddUserToDBService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/config/MyMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/config/MyMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/dao/EmployeeDaoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/dao/EmployeeDaoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeServiceImpI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeServiceImpI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/emp/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/emp/reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qsh/springbootcruddemo/service/EmployeeServiceImpI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qsh/springbootcruddemo/service/EmployeeServiceImpI.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,15 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/SpringbootCrudDemoApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/controller/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/emp/reg.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+            <state relative-caret-position="250">
+              <caret line="158" column="69" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -133,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeServiceImpI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="111">
-              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
@@ -147,6 +123,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>msg</find>
+      <find>email</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,9 +135,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/config/MyMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/dao/EmployeeDaoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/emp/reg.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/controller/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeServiceImpI.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/emp/reg.html" />
       </list>
     </option>
   </component>
@@ -179,8 +156,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-7" />
+    <option name="y" value="31" />
     <option name="width" value="1036" />
     <option name="height" value="733" />
   </component>
@@ -351,7 +328,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ajax" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -399,18 +376,18 @@
       <option name="presentableId" value="Default" />
       <updated>1565146411707</updated>
       <workItem from="1565146414973" duration="167000" />
-      <workItem from="1565177995682" duration="5979000" />
+      <workItem from="1565177995682" duration="10179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6146000" />
+    <option name="totallyTimeSpent" value="10346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -421,7 +398,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4175705" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12689805" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -480,16 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/emp/reg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/dao/EmployeeDaoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="631">
@@ -542,7 +509,24 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsh/springbootcruddemo/service/EmployeeServiceImpI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="355" column="32" selection-start-line="355" selection-start-column="32" selection-end-line="355" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/emp/reg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="158" column="69" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

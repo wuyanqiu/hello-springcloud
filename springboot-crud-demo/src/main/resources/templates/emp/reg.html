@@ -48,27 +48,47 @@
 <script type="text/javascript" src="asserts/js/bootstrap.min.js"
         th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.js}"></script>
 <script type="text/javascript">
+
+
     $(function () {
-        $("#smt").click(function () {
-            $.ajax({
-                type: 'post',  //提交方法是POST
-                url: 'regVerification', //请求的路径
-                data: {
-                    "lastName": $("input[name=lastName]").val(),
-                    "email": $("input[name=email]").val()
-                }, //以JSON字符串形式把 user 传到后台
-                timeout: 1000,  //请求超时时间，毫秒
-                success: function (result) {   //请求成功的回调方法
-                    alert(result);
-                    if (result == 'success') {
-                        $("#msg").html("验证码已发送至邮箱，请查收");
-                    } else if (result == 'lastName_repeat') {
-                        $("#msg").html("该用户名已存在，请重新输入");
-                    } else {
-                        $("#msg").html("发送验证码失败，请稍微重试");
+
+            $("#smt").click(function () {
+                $("#nameInput").attr("disabled",true);
+                $("#randomInput").attr("disabled",false);
+                $("#emailInput").attr("disabled",true);
+                $("#smt").attr("disabled",true);
+
+                var count = 60;
+                var countdown = setInterval(CountDown, 1000);
+                function CountDown() {
+                    $("#smt").attr("disabled", true);
+                    $("#smt").text( count + "秒之后重新获取验证码");
+                    if (count == 0) {
+                        $("#smt").text("获取验证码").removeAttr("disabled");
+                        clearInterval(countdown);
                     }
+                    count--;
                 }
-            });
+
+                $.ajax({
+                    type: 'post',  //提交方法是POST
+                    url: 'regVerification', //请求的路径
+                    data: {
+                        "lastName": $("input[name=lastName]").val(),
+                        "email": $("input[name=email]").val()
+                    }, //以JSON字符串形式把 user 传到后台
+                    timeout: 1000,  //请求超时时间，毫秒
+                    success: function (result) {   //请求成功的回调方法
+                        //alert(result);
+                        if (result == 'success') {
+                            $("#msg").html("验证码已发送至邮箱，请查收");
+                        } else if (result == 'lastName_repeat') {
+                            $("#msg").html("该用户名已存在，请重新输入");
+                        } else {
+                            $("#msg").html("发送验证码失败，请稍微重试");
+                        }
+                    }
+                });
         });
     });
 </script>
@@ -132,15 +152,15 @@
                 <input type="hidden" name="id" th:if="${emp!=null}" th:value="${emp.id}">-->
                 <div class="form-group">
                     <label>LastName</label>
-                    <input name="lastName" type="text" class="form-control" placeholder="zhangsan">
+                    <input id="nameInput" name="lastName" type="text" class="form-control" placeholder="zhangsan">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input name="email" type="email" class="form-control" placeholder="zhangsan@163.com">
+                    <input  id="emailInput" name="email" type="email" class="form-control" placeholder="zhangsan@163.com">
                 </div>
                 <div class="form-group">
                     <label>验证码</label>
-                    <input name="verification" type="text" class="form-control" placeholder="">
+                    <input id="randomInput" name="verification" type="text" class="form-control" placeholder="" disabled>
                 </div>
                 <button type="button" class="btn btn-primary" id="smt">获取验证码</button>
                 <div class="form-group">
