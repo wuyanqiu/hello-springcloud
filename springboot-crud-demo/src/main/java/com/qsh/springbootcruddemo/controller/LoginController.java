@@ -32,20 +32,4 @@ public class LoginController {
         }
     }
 
-    @ResponseBody
-    @PostMapping(value = "user2/login2")
-    public String login2(@RequestParam("username") String username,
-                        @RequestParam("password") String password, HttpSession session) {
-        System.out.println("登录方法进来了。" + username + password);
-        Employee oneEmp = employeeService.getOneEmp(username);
-        if (oneEmp != null && oneEmp.getPassword().equals(password)) {
-            session.setAttribute("loginUserName", username);
-            //return "redirect:/main.html";
-            return "success";
-        } else {
-            return "failed";
-        }
-    }
-
-
 }

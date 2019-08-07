@@ -16,4 +16,6 @@ public class AdminController {
     public String sayHi(String message) {
         return String.format("hi,your message is : %s ,port is %s", message, port);
     }
+
+
 }

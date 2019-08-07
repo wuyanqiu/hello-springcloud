@@ -15,18 +15,18 @@ import java.sql.Connection;
 @SpringBootTest
 public class SpringbootCrudDemoApplicationTests {
 
-    @Autowired
-    JavaMailSenderImpl javaMailSender;
+//    @Autowired
+//    JavaMailSenderImpl javaMailSender;
 
     @Test
     public void testMail(){
-        int num = (int)((Math.random()*9+1)*100000);
+        /*int num = (int)((Math.random()*9+1)*100000);
         SimpleMailMessage message = new SimpleMailMessage();
         message.setSubject("请接收验证码");
         message.setText(String.valueOf(num));
         message.setTo("510756382@qq.com");
         message.setFrom("qshsuperman@163.com");
-        javaMailSender.send(message);
+        javaMailSender.send(message);*/
     }
 
 

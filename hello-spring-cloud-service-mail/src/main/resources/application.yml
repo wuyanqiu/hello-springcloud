@@ -1,0 +1,21 @@
+spring:
+  mail:
+    username: qshsuperman@163.com
+    password: qiangshuheng1457
+    host: smtp.163.com
+  application:
+    name: hello-spring-cloud-service-mail
+  zipkin:
+    base-url: http://localhost:9411
+    boot:
+      admin:
+        client:
+          url: http://localhost:8084
+
+server:
+  port: 8163
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

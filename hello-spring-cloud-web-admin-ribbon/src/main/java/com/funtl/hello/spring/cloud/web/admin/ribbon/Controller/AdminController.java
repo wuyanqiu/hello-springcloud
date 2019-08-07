@@ -14,13 +14,9 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
-   /* @RequestMapping(value = "hi",method = RequestMethod.GET)
+   @RequestMapping(value = "hi",method = RequestMethod.GET)
     public String sayHi(@RequestParam String message){
         return adminService.sayHi(message);
-    }*/
-
-    @GetMapping(value = "hello")
-    public String hello() {
-        return "hello";
     }
+
 }

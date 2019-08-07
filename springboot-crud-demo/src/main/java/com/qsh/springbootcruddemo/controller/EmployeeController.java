@@ -5,9 +5,16 @@ import com.qsh.springbootcruddemo.entities.Employee;
 import com.qsh.springbootcruddemo.service.DeptService;
 import com.qsh.springbootcruddemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
+import com.qsh.springbootcruddemo.entities.Department;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -21,16 +28,18 @@ public class EmployeeController {
 
 
 
+
     @PostMapping("/regVerification")
     @ResponseBody
     public String getVerification(@RequestParam("lastName") String lastName, @RequestParam("email") String email) {
-        System.out.println("++++++++++++");
+
         Employee employee = new Employee();
         employee.setLastName(lastName);
         employee.setEmail(email);
         System.out.println("++++++++++++" + employee);
-        //  employeeService.getVerification(employee);
-        return "success";
+        //成功的话 result的值为ok
+        String result = employeeService.getVerification(employee);
+        return result;
     }
 
     @GetMapping("/emps")
@@ -108,7 +117,7 @@ public class EmployeeController {
         return "redirect:/emps";
     }
 
-    @GetMapping("/user/reg")
+    @GetMapping("/reg")
     public String toRegPage() {
         System.out.println(123);
         return "emp/reg";
