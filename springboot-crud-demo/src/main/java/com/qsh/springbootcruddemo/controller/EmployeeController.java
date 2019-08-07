@@ -26,6 +26,13 @@ public class EmployeeController {
     @Autowired
     private DeptService deptService;
 
+    @PostMapping("/regUser")
+    @ResponseBody
+    public String regUser(Employee employee) {
+        System.out.println("注册用户：" + employee);
+        return employeeService.regUser(employee);
+    }
+
 
 
 
@@ -39,6 +46,7 @@ public class EmployeeController {
         System.out.println("++++++++++++" + employee);
         //成功的话 result的值为ok
         String result = employeeService.getVerification(employee);
+        System.out.println("要返回给页面的String是："+result);
         return result;
     }
 

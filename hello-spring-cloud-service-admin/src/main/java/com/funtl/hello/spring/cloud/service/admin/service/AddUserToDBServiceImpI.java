@@ -17,14 +17,7 @@ public class AddUserToDBServiceImpI implements AddUserToDBService {
     @Override
     public String addUserToDb(MultiValueMap<String,Object> userMap) {
         HashMap<String,String> map = new HashMap<>();
-        String lastName = userMap.get("lastName").get(0).toString();
-        System.out.println("lastName:"+lastName);
-        String email = userMap.get("email").get(0).toString();
-        System.out.println("email:"+email);
-        String verification = userMap.get("verification").get(0).toString();
-        System.out.println("verification:"+verification);
-
-        map.put("lastName",userMap.get("lastName").get(0).toString());
+        map.put("lastName",userMap.get("lastname").get(0).toString());
         map.put("email",userMap.get("email").get(0).toString());
         map.put("verification",userMap.get("verification").get(0).toString());
         System.out.println(map);

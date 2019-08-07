@@ -34,4 +34,12 @@ public interface EmployeeDaoMapper {
     @Delete("DELETE FROM EMPLOYEE WHERE id=#{id}")
     public Integer deleteEmp(Integer id);
 
+    @Update("UPDATE EMPLOYEE SET EMAIL=#{email},PASSWORD =#{password} WHERE LASTNAME=#{lastName}")
+    public Integer regUser(Employee employee);
+
+    @Select("SELECT COUNT(*)  FROM employee WHERE LASTNAME = #{lastName}")
+    public Integer cnki(Employee employee);
+
+
+
 }

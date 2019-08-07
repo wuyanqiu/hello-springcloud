@@ -20,6 +20,14 @@ public class EmployeeServiceImpI implements EmployeeService {
     @Autowired
     private RestTemplate restTemplate;
 
+    private static final String SUCCESS = "success";
+
+    private static final String FAILED = "failed";
+
+    private static final String VERIFICATION_DIFFER = "verification_differ";
+
+    private  static final String USER_NAME_REPEAT = "lastName_repeat";
+
     @Override
     public List<Employee> getAllEmp() {
         return employeeDaoMapper.getAllEmp();
@@ -57,14 +65,33 @@ public class EmployeeServiceImpI implements EmployeeService {
         return integer != 0 ? true : false;
     }
 
-    @Async
+
     @Override
     public String getVerification(Employee employee) {
         String regVerification =String.valueOf((int)((Math.random()*9+1)*100000));
+        Integer cnkiResult = employeeDaoMapper.cnki(employee);
+        if(cnkiResult>=1){
+            return USER_NAME_REPEAT;
+        }
         String getVerResult = getVerificate(employee ,regVerification);
         String addUserToDBResult = addUserToDB(employee,regVerification);
         System.out.println("addUserToDBResult:"+addUserToDBResult);
-        return addUserToDBResult;
+        if("ok".equals(getVerResult) && "success".equals(addUserToDBResult)){
+            System.out.println("成功了要打印吧");
+            return SUCCESS;
+        }else {
+            return FAILED;
+        }
+    }
+
+    @Override
+    public String regUser(Employee employee) {
+        Employee userFormPage = employeeDaoMapper.getOneEmp(employee.getLastName());
+        if(!userFormPage.getVerification().equals(employee.getVerification())){
+            return VERIFICATION_DIFFER;
+        }else {
+            return employeeDaoMapper.regUser(employee)==1? SUCCESS:FAILED;
+        }
     }
 
     /**
