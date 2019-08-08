@@ -53,22 +53,19 @@
     $(function () {
 
             $("#smt").click(function () {
+
+
+
+                var myreg = /^[A-Za-z0-9+]+[A-Za-z0-9\.\_\-+]*@([A-Za-z0-9\-]+\.)+[A-Za-z0-9]+$/;
+                var email  = $("input[name=email]").val();
+                if(!email.match(myreg)){
+                    $("#msg").html("email输入不正确");
+                    return ;
+                }
                 $("#nameInput").attr("disabled",true);
                 $("#randomInput").attr("disabled",false);
                 $("#emailInput").attr("disabled",true);
                 $("#smt").attr("disabled",true);
-
-                var count = 60;
-                var countdown = setInterval(CountDown, 1000);
-                function CountDown() {
-                    $("#smt").attr("disabled", true);
-                    $("#smt").text( count + "秒之后重新获取验证码");
-                    if (count == 0) {
-                        $("#smt").text("获取验证码").removeAttr("disabled");
-                        clearInterval(countdown);
-                    }
-                    count--;
-                }
 
                 $.ajax({
                     type: 'post',  //提交方法是POST
@@ -85,10 +82,24 @@
                         } else if (result == 'lastName_repeat') {
                             $("#msg").html("该用户名已存在，请重新输入");
                         } else {
-                            $("#msg").html("发送验证码失败，请稍微重试");
+                            $("#msg").html("发送验证码失败，请稍后重试");
                         }
                     }
                 });
+
+                var count = 60;
+                var countdown = setInterval(CountDown, 1000);
+                function CountDown() {
+                    $("#smt").attr("disabled", true);
+                    $("#smt").text( count + "秒之后重新获取验证码");
+                    if (count == 0) {
+                        $("#smt").text("获取验证码").removeAttr("disabled");
+                        clearInterval(countdown);
+                    }
+                    count--;
+                }
+
+
         });
     });
 </script>
