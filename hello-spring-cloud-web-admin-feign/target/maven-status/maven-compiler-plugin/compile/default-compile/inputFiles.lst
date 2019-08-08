@@ -1,5 +1,5 @@
-E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\service\hystrix\AdminServiceHystrix.java
 E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\config\HystrixDashboardConfiguration.java
-E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\service\AdminService.java
-E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\controller\AdminController.java
+E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\service\hystrix\MailServiceHystrix.java
+E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\service\MailService.java
 E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\WebAdminFeignApplication.java
+E:\03.Code\hello-spring-cloud\hello-spring-cloud-web-admin-feign\src\main\java\com\funtl\hello\spring\cloud\web\admin\feign\controller\RegController.java

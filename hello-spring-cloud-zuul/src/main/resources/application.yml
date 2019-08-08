@@ -18,8 +18,8 @@ eureka:
 zuul:
   routes:
     api-a:
-      path: /api/a/**
-      serviceId: hello-spring-cloud-web-admin-ribbon
+      path: /api/user/**
+      serviceId: hello-spring-cloud-web-user
     api-b:
       path: /api/b/**
       serviceId: hello-spring-cloud-web-admin-feign
