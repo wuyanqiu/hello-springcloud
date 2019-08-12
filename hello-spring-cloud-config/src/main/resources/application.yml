@@ -13,7 +13,7 @@ spring:
           uri: https://github.com/wuyanqiu/spring-cloud-config.git
           search-paths: respo
           username: 510756382@qq.com
-          password: jing14572368.
+          password: mimayincang
   zipkin:
     base-url: http://localhost:9411
 
