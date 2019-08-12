@@ -1,7 +1,7 @@
 spring:
   mail:
     username: qshsuperman@163.com
-    password: qiangshuheng1457
+    password: yincanmima
     host: smtp.163.com
   application:
     name: hello-spring-cloud-service-mail
